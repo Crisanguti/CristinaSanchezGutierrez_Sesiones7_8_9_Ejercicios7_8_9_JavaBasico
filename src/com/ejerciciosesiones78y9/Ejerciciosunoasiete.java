@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Vector;
 
-public class ejerciciosunoydos {
+public class Ejerciciosunoasiete {
     public static void main(String[] args) {
         //Ejercicio 1: crear array unidimensional String
 
@@ -24,7 +24,7 @@ public class ejerciciosunoydos {
 
         //Ejercicio 3: crea un vector con cinco elementos
 
-        Vector<String> canciones = new Vector<String>();
+        Vector<String> canciones = new Vector<>();
         canciones.add("Happy");
         canciones.add("Moves Like Jagger");
         canciones.add("Firework");
@@ -40,26 +40,26 @@ public class ejerciciosunoydos {
 
         //Ejercicio 4: indicar el problema de usar vector con capacidad por defecto:
 
-        /**
-         * Al tener 1000 elementos para añadir, se duplicaría la capacidad de este, que implica un mayor consumo de memoria
-         * a la hora de crear un subarray nuevo, es decir, 2000 posiciones de memoria reservadas para dicho vector.
+        /*
+          Al tener 1000 elementos para añadir, se duplicaría la capacidad de este, que implica un mayor consumo de memoria
+          a la hora de crear un subarray nuevo, es decir, 2000 posiciones de memoria reservadas para dicho vector.
          */
 
         //Ejercicio 5; crear arralist y copiar en linkedlist
-        ArrayList<String> lista = new ArrayList<String>(4);
+        ArrayList<String> lista = new ArrayList<>(4);
         lista.add("Bruno Mars");
         lista.add("Maroon 5");
         lista.add("Katy Perry");
         lista.add("Ed Sheeran");
 
-        LinkedList<String> cantantes = new LinkedList<String>();
+        LinkedList<String> cantantes = new LinkedList<>();
         cantantes.addAll(lista);
         System.out.println(lista);
         System.out.println(cantantes);
 
         //Ejercicio 6: crear ArrayList con enteros del 1 al 10 usando bucles...
 
-        ArrayList<Integer> decena = new ArrayList<Integer>();
+        ArrayList<Integer> decena = new ArrayList<>();
         int i;
         for (i = 1; i <= 10; i++) {
             if (i % 2 != 0) {
@@ -71,7 +71,7 @@ public class ejerciciosunoydos {
         //Ejercicio 7: crear una función DividePorCero.
 
         try {
-            DividePorCero(5, 0);
+           DividePorCero(5, 0);
         } catch (ArithmeticException e) {
             e.printStackTrace();
         } finally {
@@ -81,6 +81,7 @@ public class ejerciciosunoydos {
     }
 
     public static void DividePorCero(int a, int b) throws ArithmeticException {
+        int resultado = a/b;
         if (b==0){
         throw new ArithmeticException("Esto no puede hacerse");
         }

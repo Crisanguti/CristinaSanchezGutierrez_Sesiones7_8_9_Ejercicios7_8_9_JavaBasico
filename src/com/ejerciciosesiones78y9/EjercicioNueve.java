@@ -47,8 +47,8 @@ public class EjercicioNueve {
 
             for (Map.Entry<String, String> pair : razastutelados.entrySet()) {  // Recorremos el HashMap
                 System.out.println(pair.getKey() + " / " + pair.getValue());
-                for (int i = 0; i < razasPeligrosasAndalucia.size(); i++) {    //Recorremos la lista de razas PPP en Andalucía
-                    boolean necesitaLicecncia = pair.getValue().equals(razasPeligrosasAndalucia.get(i));
+                for (String value : razasPeligrosasAndalucia) {    //Recorremos la lista de razas PPP en Andalucía
+                    boolean necesitaLicecncia = pair.getValue().equals(value);
                     if (necesitaLicecncia) {                                //Si coinciden razas de tutelados con razas de la lista de Andalucía, se añade a una nueva lista
                         tuteladosConLicencia.add(pair.getKey());
                     }
